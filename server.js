@@ -6,9 +6,9 @@ const app = express();
 const port = 3004; // Updated port 
 
 const corsOptions = {
-    origin: 'http://localhost:8000',
+    origin: '*',
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type']
+    allowedHeaders: ['Content-Type', 'access-token']
 }
 
 // Middleware to enable CORS 
