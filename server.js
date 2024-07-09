@@ -8,7 +8,7 @@ const port = 3004; // Updated port
 const corsOptions = {
     origin: '*',
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'access-token', 'client']
+    allowedHeaders: ['*']
 }
 
 // Middleware to enable CORS 
