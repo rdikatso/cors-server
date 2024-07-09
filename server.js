@@ -5,9 +5,14 @@ const cors = require('cors');
 const app = express(); 
 const port = 3004; // Updated port 
 
-// Middleware to enable CORS 
+const corsOptions = {
+    origin: 'http://localhost:8000',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}
 
-app.use(cors()); 
+// Middleware to enable CORS 
+app.use(cors(corsOptions)); 
 
 // Define a route to proxy the API request 
 app.get('/api/getPageRank', function (req, res) {
